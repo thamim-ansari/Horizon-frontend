@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# React Multi-Language Navigation App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This project is a React-based web application that features a multi-language navigation system. The application consists of a header with language selection options, and navigational links to various pages including Home, Movies, TV Shows, Sports, and Live content. It utilizes the `react-router-dom` package for routing and `react-icons` for icons.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Multi-Language Support:** Users can select from several languages including English, French, German, Russian, Spanish, and Chinese. The content of the navigation menu updates based on the selected language.
+- **Responsive Design:** The application provides a responsive design with a collapsible mobile menu.
+- **Dynamic Navigation:** Navigation links are dynamically translated based on the selected language.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Packages Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **`react-icons` (version ^5.3.0):** Provides a set of popular icons to use in React applications. Icons are used for language selection and mobile menu toggling.
+- **`react-router-dom` (version ^6.26.1):** Manages navigation and routing within the React application.
 
-### `npm test`
+## How It Works
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### File Structure
 
-### `npm run build`
+- **`src/components/Header.js`**: Contains the header component with language selection and navigation links. It dynamically updates the menu items based on the selected language.
+- **`src/context/LanguageContext.js`**: Defines the context for managing the active language and providing a function to change the language across the application.
+- **`src/pages/Home.js`**: Displays content for the Home page.
+- **`src/pages/Movies.js`**: Displays content for the Movies page.
+- **`src/pages/TvShows.js`**: Displays content for the TV Shows page.
+- **`src/pages/Sports.js`**: Displays content for the Sports page.
+- **`src/pages/Live.js`**: Displays content for the Live page.
+- **`src/App.js`**: The main application component that sets up routing and provides the `LanguageContext` to its children.
+- **`src/App.css`**: Contains the styles for the application.
+- **`src/index.css`**: General styles applied to the pages.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Key Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **`Header` Component:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - Displays the logo and navigational links.
+  - Includes a language selection dropdown and a mobile menu.
+  - Updates the displayed text based on the currently selected language from `LanguageContext`.
 
-### `npm run eject`
+- **`LanguageContext` Context:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - Provides the current language and a method to change it.
+  - The default language is set to English (`"EN"`).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **`App` Component:**
+  - Manages the active language state and routes between different pages.
+  - Uses `LanguageContext.Provider` to pass down the language state and updater function.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running the Project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/thamim-ansari/Horizon-frontend.git
+   cd Horizon-frontend
+   ```
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the Development Server:**
+   ```bash
+   npm start
+   ```

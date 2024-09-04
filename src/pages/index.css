@@ -1,0 +1,27 @@
+/*page container style*/
+.page-container {
+    position: relative;
+    height: calc(100vh - 50px);
+  }
+  .page-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1; 
+  }
+  @media screen and (min-width:768px) {
+    .page-container{
+        height: calc(100vh - 66px);
+    }
+  }
+  
+  /*page image style*/
+  .page-image {
+    width: 100%;
+    height: 100%;
+  }
+ 
